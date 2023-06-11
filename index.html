@@ -2,100 +2,9 @@
 <html>
     <head>
         <Title>HieuCodes</Title>
-        <style type="text/css">
-            *{
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            body{
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #ede6d6;
-            }
-            .slide-container{
-            position:relative;
-            width: 800px;
-            height: 450px;
-            border: 3px solid #ede6d6;
-            box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
-            }
-            .slide-container .slides{
-                width: 100%;
-                height: 100%;
-                position: relative;
-                overflow: hidden;
-            }
-            .slide-container .slides img{
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                object-fit: cover;
-            }
-            .slide-container .slides img:hover{
-                cursor: pointer;
-            }
-            .slide-container .slides img:not(.active){
-                top: 0;
-                left: -100%;
-            }
-            span.next, span.prev{
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                padding: 14px;
-                color: #eee;
-                font-size: 24px;
-                font-weight: bold;
-                transition: 0.5s;
-                border-radius: 3px;
-                user-select: none;
-                cursor: pointer;
-                z-index: 1;
-            }
-            span.next{
-                right: 20px;
-            }
-            span.prev{
-                left: 20px;
-            }
-            span.next:hover, span.prev:hover{
-                background-color: #ede6d6;
-                opacity: 0.8;
-                color: #222;
-            }
-            @keyframes next1{
-                from{
-                    left: 0%;
-                } to {
-                    left: -100%;
-                }
-            }
-            @keyframes next2{
-                from{
-                    left: 100%;
-                } to {
-                    left: 0%;
-                }
-            }
-            @keyframes prev1{
-                from{
-                    left: 0%;
-                } to {
-                    left: 100%;
-                }
-            }
-            @keyframes prev2{
-                from{
-                    left: -100%;
-                } to {
-                    left: 0%;
-                }
-            }
-        </style>
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <style type="text/css"></style>
     </head>
 <body>
     <div class="slide-container">
@@ -115,53 +24,7 @@
             </span>
         </div>
     </div>
-    <script type="text/javascript">
-        //access the images
-        let slideImages = document.querySelectorAll('img');
-        //Access the next and prev buttons
-        let next = document.querySelector('.next');
-        let prev = document.querySelector('.prev');
-        var counter = 0;
-        //Code for next button
-        next.addEventListener('click',slideNext);
-        function slideNext(){
-            slideImages[counter].style.animation = 'next1 0.5s ease-in forwards';
-            if(counter >= slideImages.length-1){
-                counter = 0;
-            }
-            else{
-                counter++;
-            }
-            slideImages[counter].style.animation = 'next2 0.5s ease-in forwards';
-        }
-        //code for prev button
-        prev.addEventListener('click',slidePrev);
-        function slidePrev(){
-            slideImages[counter].style.animation = 'prev1 0.5s ease-in forwards';
-            if(counter == 0){
-                counter = slideImages.length-1;
-            }
-            else{
-                counter--;
-            }
-            slideImages[counter].style.animation = 'prev2 0.5s ease-in forwards';
-        }
-        //auto sliding
-        function autoSliding(){
-            deletInterval = setInterval(timer,5000);
-            function timer(){
-                slideNext();
-            }
-        }
-        autoSliding();
-        //Stop auto sliding when mouse is over
-        const container = document.querySelector('.slide-container');
-        container.addEventListener('mouseover', function(){
-            clearInterval(deletInterval);
-        });
-        //resume sliding when mouse is out
-        container.addEventListener('mouseout', autoSliding);
-    </script>
+    <script src="sliderscript.js" type="text/javascript"></script>
 </body>
 </html>
     
