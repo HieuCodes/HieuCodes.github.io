@@ -17,18 +17,30 @@ body{
     align-items: center;
 
 }
-
+.navBar{
+    color: white;
+    padding-bottom: 30px;
+}
 .projectContainer{
-    padding-top: 60px;
-    padding-left: 550px;
+    background-color: pink;
+    height: 250px;
+    border: 5px solid #464866;
+    border-radius: 20px;
+    background-color: aqua;
+    height: 300px;
 }
 .projectImage{
     width: 100%;
-    border: 3px solid;
-    border-color: #29648A;
-    border-radius: 20px;
+    border-radius: 12px;
     
-    
+
+}
+.projectGrid{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: center;
+    column-gap: 40px;
+    row-gap:40px
 }
 .projectTitle{
     font-weight: bold;
@@ -37,9 +49,6 @@ body{
 .websitelogo{
     padding-bottom: 20px;
     color: white;
-}
-.img1{
-    border-radius: 30PX;
 }
 .slide-container{
 position: relative;
