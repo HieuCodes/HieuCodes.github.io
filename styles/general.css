@@ -60,8 +60,12 @@ body{
     padding-left: 10px;
 }
 .websitelogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
     padding-bottom: 20px;
-    color: white;
+
 }
 .slide-container{
 position: relative;
