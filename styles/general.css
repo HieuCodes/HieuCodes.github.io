@@ -5,7 +5,7 @@
 }
 body{
     position: relative;
-    background-color: #ede6d6;
+    background-color: #25274D;
     width: 100%;
     height: 10000px;
     padding-top: 20px;
@@ -25,7 +25,7 @@ body{
 .projectImage{
     width: 100%;
     border: 3px solid;
-    border-color: black;
+    border-color: #29648A;
     border-radius: 20px;
     
     
@@ -36,14 +36,19 @@ body{
 
 .websitelogo{
     padding-bottom: 20px;
+    color: white;
+}
+.img1{
+    border-radius: 30PX;
 }
 .slide-container{
 position: relative;
 width: 800px;
 height: 450px;
-border: 3px solid #ede6d6;
+border: 8px solid #464866;
 box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
 margin-bottom: 40px;
+border-radius: 30px;
 }
 .slide-container .slides{
     width: 100%;
@@ -56,6 +61,7 @@ margin-bottom: 40px;
     height: 100%;
     position: absolute;
     object-fit: cover;
+
 }
 .slide-container .slides img:hover{
     cursor: pointer;
@@ -69,7 +75,7 @@ span.next, span.prev{
     top: 50%;
     transform: translateY(-50%);
     padding: 14px;
-    color: #eee;
+    color: white;
     font-size: 24px;
     font-weight: bold;
     transition: 0.5s;
