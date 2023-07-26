@@ -38,10 +38,13 @@ body{
 }
 .projectGrid{
     display: grid;
+    padding-left: 20px;
+    padding-right: 20px;
     grid-template-columns: 300px 300px 300px;
     justify-content: center;
     column-gap: 40px;
     row-gap:40px
+    
 }
 .projectTitle{
     font-weight: bold;
