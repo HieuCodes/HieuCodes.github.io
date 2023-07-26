@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    background-color: #25274D;
+    width: 100%;
+    height: 3000px;
+    padding-top: 20px;
+    font-family: Arial;
+    
+}
+.bodyflex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.websitelogo{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    padding-bottom: 20px;
+
+}
