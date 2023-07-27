@@ -6,7 +6,7 @@
 body{
     background-color: #25274D;
     width: 100%;
-    height: 3000px;
+    height: 2000px;
     font-family: Arial;
     
 }
@@ -124,7 +124,7 @@ border-radius:30px;
     height: 100%;
     position: relative;
     overflow: hidden;
-    border-radius: 30px;
+    border-radius: 23px;
 }
 .slide-container .slides img{
     width: 100%;
