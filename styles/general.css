@@ -28,6 +28,19 @@ body{
     padding-top: 200px;
     color: white;
 }
+.projectGrid2{
+    padding-top: 135px;
+    display: grid;
+    grid-template-columns: 1000px;
+    justify-content: center;
+    align-items: center;
+}
+.projectImage2{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
 .logoFlex{
     display: flex;
     flex-direction: row;
