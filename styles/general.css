@@ -4,23 +4,40 @@
     box-sizing: border-box;
 }
 body{
-    position: relative;
     background-color: #25274D;
     width: 100%;
     height: 3000px;
-    padding-top: 20px;
+    padding-top: 5px;
     font-family: Arial;
     
 }
-.bodyflex{
+.logoFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.navBarFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    margin-bottom: 20px;
+
+}
+.navButtons{
+    width: 100px;
+    text-align: center;
+    background-color: #27374D;
+    border: 5px solid #464866;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.slideflex{
     display: flex;
     flex-direction: column;
     align-items: center;
 
-}
-.navBar{
-    color: white;
-    padding-bottom: 30px;
 }
 .projectContainer{
     height: 250px;
@@ -67,7 +84,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     width: 150px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 
 }
 .slide-container{
@@ -108,7 +125,7 @@ span.next, span.prev{
     font-size: 24px;
     font-weight: bold;
     transition: 0.5s;
-    border-radius: 3px;
+    border-radius: 30px;
     user-select: none;
     cursor: pointer;
     z-index: 1;
