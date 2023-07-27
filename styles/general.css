@@ -13,7 +13,7 @@ body{
 .navLogoFix{
     position: fixed;
     z-index: 100;
-    height:335px;
+    height:260px;
     background-color:#25274D;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -103,12 +103,13 @@ body{
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    width: 100px;
-    padding-top:170px;
+    width: 70px;
+    height: auto;
+    margin-top:135px;
 
 }
 .slide-container{
-margin-top: 180px;
+margin-top: 135px;
 position: relative;
 width: 800px;
 height: 450px;
