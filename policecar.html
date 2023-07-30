@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Police Car</title>
+        <link rel="stylesheet" href="styles/general.css">
+    </head>
+    <body style="height: 6700px;">
+        <div class="navLogoFix">
+            <div class="logoFlex">
+                <div><a href="index.html"><img src="homeImages/hieulogo.png" class="websitelogo" ></a></div>
+            </div>
+            <div class="navBarFlex">
+                <div class="navButtons">
+                    <a href="index.html"><p class="navText">Start</p></a>
+                </div>
+                <div class="navButtons">
+                    <a href="index.html"><p class="navText">Home</p></a>
+                </div>
+                <div class="navButtons">
+                    <a href="index.html"><p class="navText">End</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="projectGrid2">
+            <p class="title">Remote-controlled Police Car</p>
+           <div ><img style="margin-top: 20px;" src="policecarimages/side.JPG" class="projectImage2"></div>
+            <div><p class="author">
+                Hieu Hoang
+                </p>
+                <p class="date">
+                7/29/2023
+                </p>
+                <p class="paragraph">This is an overview of how my police car project came into life. The idea for this project came to me when I suddenly remembered my first time seeing the black
+                    and red wires that provide power to electronics in an old remote controlled police toy car. It was a random moment I remember as a child back home in Vietnam with the rest of my family.
+                    The car has long been lost to me and was originally not even mine, but I wanted to recreate what was possibly the first device to set me on the electrical engineering path. 
+                </p>
+                <p class="gallery">
+                    Gallery
+                </p>
+                <div class="slideflex">
+        
+                    <div class="slide-container2">
+                    
+                        <div class="slides">
+                            <img src="policecarimages/anotherside.JPG" class="active" >
+                            <img src="policecarimages/anotherback.jpg" class="img1" >
+                            <img src="policecarimages/front.jpg" class="img1">
+                            <img src="policecarimages/sidetop.jpg" class="img1">
+                            <img src="policecarimages/back.jpg" class="img1">
+                            
+                            
+                        </div>
+                        <div class="buttons">
+                            <span class="next">
+                                &#10095;
+                            </span>
+                            <span class="prev">
+                                &#10094;
+                            </span>
+                        </div>
+                    </div> 
+                </div>
+
+                <p class="paragraph">As seen, the police car is made from a 3D printed shell and put together using hot glue. This is not the most optimal solution, but was required due to the size of 
+                    the Arduino Mega as well as the motor driver. The physical limitation of my 3D printer made it impossible to print the car body in one piece, thus it was split into two and glued together.
+                    In the future, I hope to become good enough at 3D modeling to incoporate screws into my model so that my builds are more rigid. The wheels were also 3D printed, with rubber bands attached for traction.
+                    A slot was kept open in the back of the car for easy access to the Arduino Mega for any future programming.
+                </p>
+                <div><img src="policecarimages/arduinomega.JPG" class="projectImage2"></div>
+                <p class="paragraph">
+                    This is the Arduino Mega. It is a microcontroller and the brain of the whole build. Truth to be told, the Arduino Mega has way too many pins and is an overkill microcontroller 
+                    for this build. I selected the Arduino Mega because it had the minimum required number of Pulse-width Modulation (PWM) pins for the project. The Arduino Uno initially selected
+                    for this build had the right number of PWM pins, but due to some features disabling some of its PWM pins, it became unable to run all the required features in the final stages of 
+                    the project.
+                </p>
+                <div><img src="policecarimages/gearboxmotor.JPG" class="projectImage2"></div>
+                <p class="paragraph">
+                    This is what is commonly called as a gearbox motor. From my understanding, it got its name because it is comprised of a DC motor connected to a gearbox inside its shell. 
+                    Two of these motors provide the car torque to move forward and backwards.
+                </p>
+                <div><img src="policecarimages/motordriver.JPG" class="projectImage2"></div>
+                <p class="paragraph"> 
+                    The L298N motor driver allows the Arduino Mega to control the motion of each gearbox motor. It can drive two gearbox motors at once. The driver allows a passthrough from a battery to
+                    power the motors AND the Arduino Mega with one battery. To drive the motors forward, the motor driver runs electricity in one direction. For the motor to drive
+                    in the opposite direction (backwards), the motor driver essentially switches the direction of the current. Although powering both the Arduino Mega and motors with a single battery was 
+                    an option with this motor driver, I opt to only power the motors as I believe they can last longer that way. In the final stages of this project, I also found out that this 
+                    motor driver is highly inefficient in the modern age and has a voltage drop of ~2 volts before any of it goes to the motor. Due to this fact, a more power-efficient driver such as the 
+                    TB6612FNG should be used. I also found that while a single 9V battery has enough voltage to drive the two gearbox motors, it should not be used due to its low current. This leads to 
+                    a rather fast burnout of the battery. A Lithium-Polyomer (LIPO) battery should be used instead as a way of powering remote-controlled projects.
+
+                </p>
+                <div><img src="policecarimages/servomotor.JPG" class="projectImage2"></div>
+                <p class="paragraph">
+                    This 9 gram servo motor provides torque to an axle and sits in the center of the car at the front. Its red and brown wires are connected to the motor driver to gain power,
+                    while its yellow wire is connected to the Arduino for motion control. The use of this servo motor could've been entirely avoided, as moving one of the back motors without moving the other
+                    would've provided a sufficient way to turn the car. That method may have even been better for the build as the front axle felt rather flimsy, but I wanted to replicate the mechanics of a real
+                    car as much as possible.
+                </p>
+                <div><img src="policecarimages/controlbox.JPG" class="projectImage2"></div>
+                <p class="paragraph">
+                    In order to control the car, I custom built what I call the "Control Box". The box is made of the Arduino Nano, a wireless module, a joystick, and some double A batteries at 
+                    the bottom. I have plans to built a full controller with dual joysticks and a wireless module with an extended antenna for longer range, but for the sake of this project I 
+                    decided that a simple control box was going to do the trick. 
+                </p>
+                <div><img src="policecarimages/arduinonano.JPG" class="projectImage2"></div>
+                    <p class="paragraph"> This is the Arduino Nano. I chose the Nano for its small size and low power consumption. It is the brains of the control box. It takes input 
+                        from the joysticks and sends it to the Arduino Mega on the car through the wireless module.
+                    </p>
+                <div><img src="policecarimages/wirelessmodule.JPG" class="projectImage2"></div>
+                <p class="paragraph">Above is the module that makes wireless communication between the control box and the car possible. It is the nRF24L01 wireless module. The module comes
+                    in a few different versions, notably one without an extended antenna and one with a detachable antenna for long-range communication. Its connections and slightly complicated.
+                    It requires specific pins on an Arduino, and depending on which model of Arduino one has, the connections may be at completely different places. For Arduino Mega connections, refer 
+                    to the Fritzing screenshot provided later.
+
+                </p>
+                <div><img src="policecarimages/policecarconnections.PNG" class="projectImage2"></div>
+                <p class="paragraph">
+                    Above is a screenshot from a software I use to mark down wired connections, Fritzing. The software is paid and costs $8, but I believe its well worth the money as it allows
+                    one to upload their own custom components, if they're missing from the database. This screenshot is for the connections I made for the police car project. Unfortunately I forgot 
+                    to document the connections for the control box, but they're mostly the same as the wireless connections for the Arduino Mega. Someone planning to use the Nano for wireless connections 
+                    should look up the location of its required pins for the nRF24L01.
+                </p>
+                <video width="80%" controls class="testvideos">
+                        <source src="policecarimages/testrun.mp4" type="video/mp4">
+                        </video>
+                <p class="paragraph">Finally, here is a test run of the remote controlled police car, cat included. Please excuse my driving skills.</p>
+                <p style="color: white;">Downloads</p>
+                <a href = "policecarimages/policecarconnections.fzz" download = "policecarconnections.fzz"><p class="download">policecarconnections.fzz (Fritzing File)</p></a>
+            </div>
+            
+            
+            <script src="sliderscript.js" type="text/javascript"></script>
+    </body>
+</html>
